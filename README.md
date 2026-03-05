@@ -1,3 +1,9 @@
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-green)
+![Express](https://img.shields.io/badge/Framework-Express-black)
+![API](https://img.shields.io/badge/API-YouTube-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
