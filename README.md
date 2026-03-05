@@ -4,19 +4,80 @@
 ![API](https://img.shields.io/badge/API-YouTube-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-# React + Vite
+# 🎓 EduRank – AI-Powered Educational Video Ranking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EduRank is a full-stack educational web application that fetches educational videos from YouTube using API calls and ranks them using an AI-based ranking system.  
 
-Currently, two official plugins are available:
+The platform provides structured subject-wise notes and documented learning resources to improve the overall learning experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is currently under active development, and new features are continuously being added.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔎 Fetches educational videos using YouTube API
+- 🤖 AI-based intelligent video ranking system
+- 📚 Subject-wise categorized learning content
+- 📝 Structured and documented notes
+- ⚛️ Interactive frontend built with React
+- 🔄 Real-time API data fetching
+- 🌐 Responsive and clean UI design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+
+### Backend
+- Node.js
+- Express.js
+
+### API Integration
+- YouTube Data API
+
+---
+
+## 🧠 AI-Based Ranking System
+
+EduRank uses an AI-driven approach to rank videos based on multiple parameters such as:
+
+- Content relevance
+- Engagement metrics
+- Learning value
+- Recency
+- Keyword matching
+
+The system prioritizes high-quality and educationally valuable content to ensure students receive the best possible resources.
+
+---
+
+## 🔄 Ongoing Development
+
+This project is actively being improved. Upcoming enhancements include:
+
+- Personalized recommendations
+- User authentication
+- Bookmarking system
+- Advanced AI ranking improvements
+- Downloadable notes
+- Dashboard and analytics features
+
+---
+
+## 💡 Vision
+
+The goal of EduRank is to reduce the time students spend searching for quality educational content and provide a structured, intelligent, and efficient learning platform.
+
+---
+
+## 👨‍💻 Author
+
+Lov Nimesh  
+B.Tech CSE Student  
+Full Stack Developer
