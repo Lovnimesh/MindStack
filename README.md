@@ -2,7 +2,7 @@
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-green)
 ![Express](https://img.shields.io/badge/Framework-Express-black)
 ![API](https://img.shields.io/badge/API-YouTube-red)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+
 
 # 🎓 EduRank – AI-Powered Educational Video Ranking Platform
 
@@ -40,7 +40,7 @@ This project is currently under active development, and new features are continu
 
 ### API Integration
 - YouTube Data API
-
+- Gemini API
 ---
 
 ## 🧠 AI-Based Ranking System
