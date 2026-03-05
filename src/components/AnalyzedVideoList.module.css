@@ -1,0 +1,35 @@
+.videoList {
+  /* height: max-content; */
+  height: 90vh;
+  overflow: auto;
+  width: 45%;
+  border-radius: 15px;
+  padding: 0.5rem;
+  /* border: 1px solid black; */
+  /* margin: 1rem 1rem; */
+  /* margin-top: 2rem; */
+  background-color: rgba(255, 255, 255, 0.176);
+}
+.videoList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.videoList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.videoList::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 7rem;
+}
+.header {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0.5rem 2rem 1rem 2rem;
+  text-align: center;
+  padding: 1rem;
+  /* width: fit-content; */
+  border-radius: 14px;
+  background-color: #63636abd;
+}

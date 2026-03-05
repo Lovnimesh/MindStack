@@ -1,0 +1,50 @@
+.homePage {
+  /* background-color: #15202f; */
+  padding: 0.8rem;
+}
+.heroSection {
+  width: 82vw;
+  border-radius: 1rem;
+  margin: auto;
+  height: max-content;
+  min-height: 80vh;
+  background-color: rgba(255, 255, 255, 0.719);
+  margin-top: 2rem;
+  color: rgb(28, 28, 28);
+}
+
+.container {
+  display: grid;
+  width: 80%;
+  column-gap: 2rem;
+  margin: 3rem;
+  grid-template-columns: 2fr 1.5fr;
+  margin: auto;
+}
+
+.left h3 {
+  width: 70%;
+  font-weight: 500;
+  color: rgb(42, 41, 41);
+  line-height: 1.6rem;
+  font-weight: 400;
+}
+
+.right h3 {
+  font-size: 4rem;
+  margin: 1rem;
+}
+.right img {
+  width: 24rem;
+}
+.heading {
+  font-size: 13rem;
+  margin: 3rem 0.5rem 4rem 0.5rem;
+}
+/* .heading:nth-child(2) {
+  margin-top: 7rem;
+} */
+
+.btns {
+  margin: 2rem 0.2rem;
+}

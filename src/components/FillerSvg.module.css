@@ -1,0 +1,49 @@
+.gauge-container {
+  position: relative;
+  width: 150px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.guage-svg {
+  position: relative;
+  top: -2rem;
+}
+/* The Grey Background of the Curve */
+.gauge-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 7;
+  stroke-linecap: round; /* Makes the ends circular */
+}
+
+/* The Colored "Progress" Part */
+.gauge-progress {
+  fill: none;
+  stroke: url(#rankGradient); /* Reference a gradient or use hex */
+  stroke-width: 6.5;
+  stroke-linecap: round;
+
+  /* This controls the length of the curve */
+  stroke-dasharray: 126; /* Total length of the arc */
+  /* stroke-dashoffset: 40; Change this to "fill" the bar (0 is full) */
+
+  transition: stroke-dashoffset 1s ease-in-out;
+  filter: drop-shadow(0 0 1px rgba(251, 255, 254, 0.6));
+}
+
+/* Specific color for Rank (Cyan) */
+.gauge-progress {
+  stroke: #15ba7e;
+}
+
+/* Positioning the #3 in the middle of the curve */
+.gauge-value {
+  position: absolute;
+  bottom: 0;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #fff 0%, #a5a5a5 100%);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+}

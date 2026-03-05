@@ -1,0 +1,9 @@
+.videos {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(29vw, 1fr));
+  color: #ffffff;
+  background-color: #010101b3;
+  padding: 1rem;
+  border-radius: 1.1rem;
+}

@@ -1,0 +1,12 @@
+.libPage {
+  padding: 0.8rem;
+}
+
+.divCont {
+  width: 82vw;
+  margin: auto;
+  height: max-content;
+  min-height: 80vh;
+  margin-top: 2rem;
+  color: white;
+}
