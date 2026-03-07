@@ -8,13 +8,30 @@ import { NavLink, Outlet } from "react-router-dom";
 const PropContext = createContext();
 
 export default function SearchVideo() {
-  const [videoData, setvideoData] = useState([]);
-  const [analyzedData, setAnalyzedData] = useState([]);
+  const [videoData, setvideoData] = useState(fetcVideoData);
+  const [analyzedData, setAnalyzedData] = useState(fetchAnalyzedData);
   const [inputQuery, setInputQuery] = useState("");
   const [query, setQuery] = useState("");
   const [videoLinks, setVideoLinks] = useState([]);
   const [videoIds, setVideoIds] = useState([]);
   // const [AIMode, setAIMode] = useState(false);
+
+  //function defined to fetch the videoData from localstorage;
+  function fetcVideoData() {
+    const storedData = JSON.parse(localStorage.getItem("videoData"));
+    return storedData || [];
+  }
+  function fetchAnalyzedData() {
+    const storedData = JSON.parse(localStorage.getItem("analyzedData"));
+    return storedData || [];
+  }
+
+  useEffect(() => {
+    localStorage.setItem("videoData", JSON.stringify(videoData));
+  }, [videoData]);
+  useEffect(() => {
+    localStorage.setItem("analyzedData", JSON.stringify(analyzedData));
+  }, [analyzedData]);
 
   async function getVideoId(query) {
     const url1 = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(

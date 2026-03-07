@@ -8,7 +8,7 @@ import AnalyzedVideoDesc from "./AnalyzedVideoDesc";
 
 function AnalyzedData() {
   const navigate = useNavigate();
-  const { videoData, setAnalyzedData } = useContext(PropContext);
+  const { videoData, analyzedData, setAnalyzedData } = useContext(PropContext);
   const newVideoData =
     videoData.length > 20 ? videoData.slice(0, 20) : videoData;
   const [isLoading, setIsLoading] = useState(true);
@@ -17,6 +17,7 @@ function AnalyzedData() {
 
   const getAnalyzedData = async function (obj) {
     if (obj.length === 0) return;
+    console.log(isLoading);
 
     const cleanedData = obj
       .map(
@@ -37,7 +38,6 @@ function AnalyzedData() {
     console.log("sending data to backend", cleanedData, cleanedData.length);
 
     try {
-      setIsLoading(true);
       const response = await fetch("http://localhost:5000/analyze-data", {
         method: "POST",
         headers: {
@@ -48,6 +48,7 @@ function AnalyzedData() {
           data: cleanedData,
         }),
       });
+      setIsLoading(false);
 
       if (!response.ok) {
         console.error("Server error:", response.status, response.statusText);
@@ -67,7 +68,7 @@ function AnalyzedData() {
     } catch (err) {
       console.error("Fetch Error:", err);
     } finally {
-      setIsLoading(false);
+      setIsLoading(true);
     }
   };
 
@@ -114,7 +115,7 @@ function AnalyzedData() {
           </div>
         </div>
       </div>
-      {!isLoading && (
+      {analyzedData.length > 0 && (
         <div className={styles.videoContainer}>
           <AnalyzedVideoList />
           <AnalyzedVideoDesc />

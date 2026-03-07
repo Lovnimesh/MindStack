@@ -3,6 +3,7 @@
 }
 
 .divCont {
+  display: flex;
   width: 82vw;
   margin: auto;
   height: max-content;
