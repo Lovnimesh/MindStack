@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useState } from "react";
 import Home from "./pages/home";
 import SearchVideo from "./pages/SearchVideo";
 // import SearchVideo from "./pages/SearchVideo";
@@ -8,12 +9,24 @@ import "./index.css";
 import Library from "./pages/Library";
 
 function App() {
+  const [watchedVideos, setWatchedVideos] = useState([]);
+  const [SavedVideos, setSavedVideos] = useState([]);
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="searchVideos" element={<SearchVideo />}>
+          <Route
+            path="searchVideos"
+            element={
+              <SearchVideo
+                watchedVideos={watchedVideos}
+                SavedVideos={SavedVideos}
+                setSavedVideos={setSavedVideos}
+                setWatchedVideos={setWatchedVideos}
+              />
+            }
+          >
             <Route index element={<Navigate to="findVideo" replace />} />
             <Route path="findVideo" element={<FindVideo />} />
 

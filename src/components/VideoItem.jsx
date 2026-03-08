@@ -1,12 +1,20 @@
 import PropTypes from "prop-types";
+import { PropContext } from "../pages/SearchVideo";
 import styles from "./VideoItem.module.css";
 import { FaRegUser } from "react-icons/fa";
+import { useContext } from "react";
 
 function VideoItem({ vid }) {
   // const curTime = new Date();
   // console.log(curTime.getFullYear());
+  const { setWatchedVideos } = useContext(PropContext);
   return (
     <a
+      onClick={() =>
+        setWatchedVideos((v) =>
+          v.some((id) => id === vid.id) ? v : [...v, vid.id],
+        )
+      }
       href={`https://www.youtube.com/watch?v=${vid.id}`}
       target="_blank"
       rel="noopener noreferrer"

@@ -4,10 +4,16 @@ import API_KEY from "../../my-backend/api";
 import styles from "./SearchVideo.module.css";
 import PageNav from "../components/PageNav";
 import { NavLink, Outlet } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const PropContext = createContext();
 
-export default function SearchVideo() {
+export default function SearchVideo({
+  setWatchedVideos,
+  setSavedVideos,
+  watchedVideos,
+  SavedVideos,
+}) {
   const [videoData, setvideoData] = useState(fetcVideoData);
   const [analyzedData, setAnalyzedData] = useState(fetchAnalyzedData);
   const [inputQuery, setInputQuery] = useState("");
@@ -159,6 +165,10 @@ export default function SearchVideo() {
         videoData,
         analyzedData,
         setAnalyzedData,
+        setSavedVideos,
+        setWatchedVideos,
+        watchedVideos,
+        SavedVideos,
       }}
     >
       <div className={styles.searchVideos}>
@@ -180,3 +190,10 @@ export default function SearchVideo() {
 }
 
 export { PropContext };
+
+SearchVideo.propTypes = {
+  watchedVideos: PropTypes.array.isRequired,
+  SavedVideos: PropTypes.array.isRequired,
+  setWatchedVideos: PropTypes.func.isRequired,
+  setSavedVideos: PropTypes.func.isRequired,
+};
