@@ -18,7 +18,7 @@ function AnalyzedVideoList() {
     <>
       <div className={styles.videoList}>
         <div className={styles.header}>Video Analysis Rankings</div>
-        {console.log(analyzedData)}
+        {/* {console.log(analyzedData)} */}
         {analyzedData?.length > 0 &&
           analyzedData.map((data, idx) => (
             <AnalyzedVideoItem

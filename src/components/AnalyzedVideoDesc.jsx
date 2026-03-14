@@ -48,7 +48,7 @@ function AnalyzedVideoDesc() {
           : views;
 
   function setVideo(data) {
-    const idx = Number(data.id?.split("-")[1]) - 1;
+    const idx = Number(data.id?.split("_")[1]) - 1;
     const vidData = videoData[idx];
     console.log(data);
     console.log(vidData);
