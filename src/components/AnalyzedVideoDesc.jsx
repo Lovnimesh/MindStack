@@ -17,13 +17,14 @@ import FillerSvg from "./FillerSvg";
 // };
 
 function AnalyzedVideoDesc() {
-  const { analyzedData, setWatchedVideos } = useContext(PropContext);
+  const { analyzedData, setWatchedVideos, videoData } = useContext(PropContext);
   const { rank } = useParams();
   const [searchParams, _setSearchParams] = useSearchParams();
   const id = searchParams.get("id");
   console.log(id);
   const data = rank ? analyzedData[rank - 1] : "";
   const sentScore = data?.sentiment;
+
   //
   const sentimentData =
     sentScore > 90
@@ -46,14 +47,22 @@ function AnalyzedVideoDesc() {
           ? (views / 1000).toFixed(2) + " K"
           : views;
 
+  function setVideo(data) {
+    const idx = Number(data.id?.split("-")[1]) - 1;
+    const vidData = videoData[idx];
+    console.log(data);
+    console.log(vidData);
+    setWatchedVideos((v) =>
+      v.some((video) => video?.id === vidData?.id) ? v : [...v, vidData],
+    );
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>
         <span style={{ fontSize: "1.2rem", fontWeight: "600" }}>Title: </span>
         <a
-          onClick={() =>
-            setWatchedVideos((v) => (v.some((i) => i === id) ? v : [...v, id]))
-          }
+          onClick={() => setVideo(data)}
           href={`https://www.youtube.com/watch?v=${id}`}
           target="_blank"
           rel="noopener noreferrer"

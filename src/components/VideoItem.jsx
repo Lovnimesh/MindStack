@@ -12,7 +12,7 @@ function VideoItem({ vid }) {
     <a
       onClick={() =>
         setWatchedVideos((v) =>
-          v.some((id) => id === vid.id) ? v : [...v, vid.id],
+          v.some((video) => video.id === vid.id) ? v : [...v, vid],
         )
       }
       href={`https://www.youtube.com/watch?v=${vid.id}`}

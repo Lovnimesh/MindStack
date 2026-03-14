@@ -29,7 +29,7 @@ function AnalyzedVideoItem({ rank, data, idx, randomColors }) {
   const vidData = videoData[index];
   const time = timeConverter(vidData?.time);
   const color = randomColors();
-  console.log(vidData);
+  // console.log(vidData);
   return (
     <>
       <NavLink

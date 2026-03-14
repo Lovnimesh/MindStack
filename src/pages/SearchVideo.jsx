@@ -111,8 +111,6 @@ export default function SearchVideo({
 
       const videoList = data.items;
 
-      console.log(data);
-
       const videoStats = [];
       await Promise.all(
         videoList.map(async (item) => {
