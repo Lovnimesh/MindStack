@@ -1,0 +1,10 @@
+.container {
+  width: 17%;
+  padding: 0.7rem 0.7rem 1.7rem 0.7rem;
+  background-color: #00000045;
+  border-radius: 1rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+}
